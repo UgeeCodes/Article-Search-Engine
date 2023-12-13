@@ -9,7 +9,6 @@ from wiki import article_titles, ask_search, ask_advanced_search
 # Returns: list of article titles containing given keyword (case insensitive).
 # If the keyword is empty or no results are found, return an empty list.
 #
-# Hint: to get list of existing article titles, use article_titles()
 def search(keyword):
     if keyword == '':
         return []
@@ -52,7 +51,7 @@ def title_length(max_length, titles):
 # Returns: list of articles in given titles starting from the 
 # beginning that do not exceed given count in total. If there are no 
 # given article titles, return an empty list regardless of the count.
-# If the max is larger than the # of titles, just return all titles.
+# If the max is larger than the # of titles, returns all titles.
 def article_count(count, titles):
     res = []
     if len(titles) == 0:
@@ -73,7 +72,7 @@ def article_count(count, titles):
 #   titles - list of article titles to search through
 #
 # Returns: article title in given titles at given index. If
-# index is not valid, return an empty string
+# index is not valid, returns an empty string
 def random_article(index, titles):
     res = ''
     if index in range(len(titles)):
